@@ -1,0 +1,10 @@
+// 1.20.4	2024-01-24T18:42:49.3188563	Block States: arkdust
+dec84ebbcd092ced61378c679985b21d97b7df47 assets/arkdust/blockstates/spirit_stone.json
+75483d93d8cde042f769a6b7b4e7031367d447aa assets/arkdust/blockstates/spirit_stone_activated.json
+2dc072e37b41656574d1a456f372d1f2234c1100 assets/arkdust/blockstates/spirit_stone_unactivated.json
+6c48f95da2321c7e6c0dd90d0e0305968f2788ff assets/arkdust/models/block/spirit_stone.json
+39d21fbf74552311288cbdf89235c0523bfc8cc0 assets/arkdust/models/block/spirit_stone_activated.json
+e8f1c1089f65e5324eb2441857f13699325305a0 assets/arkdust/models/block/spirit_stone_unactivated.json
+af4964f87a0069b5d32ecf2244b607953fa23a34 assets/arkdust/models/item/spirit_stone.json
+803da58e361ef4a4d21376016108ceb98763171f assets/arkdust/models/item/spirit_stone_activated.json
+9828aa62544679224af874ff180311091b9b2d50 assets/arkdust/models/item/spirit_stone_unactivated.json

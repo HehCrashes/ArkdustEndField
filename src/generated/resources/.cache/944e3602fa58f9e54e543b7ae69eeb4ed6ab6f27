@@ -1,0 +1,4 @@
+// 1.20.4	2024-01-24T19:50:25.8545222	Tags for minecraft:block mod id arkdust
+b60fb6ee12aeaa0558ed14365fd664d25838baa3 data/forge/tags/blocks/needs_netherite_tool.json
+3ba71a03cae57152231cbe65ef8a2afdac3348df data/minecraft/tags/blocks/mineable/pickaxe.json
+d5b39b777e10ee31df9674bb5bdc52eb514548b1 data/minecraft/tags/blocks/needs_diamond_tool.json
