@@ -2,6 +2,7 @@
   "values": [
     "arkdust:spirit_stone_activated",
     "arkdust:spirit_stone_unactivated",
-    "arkdust:spirit_stone"
+    "arkdust:spirit_stone",
+    "arkdust:spirit_stela"
   ]
 }

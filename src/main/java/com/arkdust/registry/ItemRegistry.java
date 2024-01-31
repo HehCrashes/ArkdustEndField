@@ -30,6 +30,8 @@ public class ItemRegistry {
     public static final DeferredItem<BlockItem> SPIRIT_STONE_UNACTIVATED = ITEMS_DEFAULT.registerSimpleBlockItem(BlockRegistry.SPIRIT_STONE_UNACTIVATED,new Item.Properties().fireResistant());
     public static final DeferredItem<BlockItem> SPIRIT_STONE_ACTIVATED = ITEMS_DEFAULT.registerSimpleBlockItem(BlockRegistry.SPIRIT_STONE_ACTIVATED,new Item.Properties().fireResistant());
     public static final DeferredItem<BlockItem> SPIRIT_STONE = ITEMS_DEFAULT.registerSimpleBlockItem(BlockRegistry.SPIRIT_STONE,new Item.Properties().fireResistant());
+    public static final DeferredItem<BlockItem> SPIRIT_STELA = ITEMS_DEFAULT.registerSimpleBlockItem(BlockRegistry.SPIRIT_STELA,new Item.Properties().fireResistant());
+//    public static final DeferredItem<BlockItem> SPIRIT_PORTAL = ITEMS_DEFAULT.registerSimpleBlockItem(BlockRegistry.SPIRIT_PORTAL,new Item.Properties().fireResistant());
 
     public static Collection<DeferredHolder<Item, ? extends Item>> getEntries() {
         List<DeferredHolder<Item, ? extends Item>> list = new ArrayList<>();
