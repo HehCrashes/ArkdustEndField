@@ -3,11 +3,13 @@ package com.arkdust.blocks.levelblocks;
 import com.arkdust.blockentity.portal.SpiritPortalBlockEntity;
 import com.arkdust.blocks.ExplainableBlock;
 import com.arkdust.registry.BlockRegistry;
+import com.arkdust.worldgen.dimension.SarconDimension;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -29,6 +31,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.common.CommonHooks;
+import net.neoforged.neoforge.common.util.ITeleporter;
 import org.jetbrains.annotations.Nullable;
 
 import static com.arkdust.helper.RenderHelper.spawnParticles;
@@ -145,7 +148,7 @@ public class SpiritStoneBlocks {
         }
     }
 
-    public static class Portal extends ExplainableBlock implements EntityBlock {
+    public static class Portal extends ExplainableBlock implements EntityBlock , ITeleporter {
         public Portal() {
             super(BlockBehaviour.Properties.of()
                     .strength(-1.0F)
@@ -186,14 +189,11 @@ public class SpiritStoneBlocks {
             return new SpiritPortalBlockEntity(pPos,pState);
         }
 
-        //        @Override
-//        public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-//            return Shapes.or(
-//                    Shapes.create(0,0,0,1,0.1875,1),
-//                    Shapes.create(0.0625,0.1875,0.0625,0.9375,0.3125,0.9375),
-//                    Shapes.create(0.25,0.3125,0.25,0.75,1,0.75),
-//                    Shapes.create(0.125,0.8125,0.125,0.875,0.9375,0.875)
-//            );
-//        }
+        @Override
+        public void updateEntityAfterFallOn(BlockGetter pLevel, Entity pEntity) {
+            if(pEntity instanceof Player && pLevel instanceof ServerLevel serverLevel){
+                pEntity.changeDimension(serverLevel.getServer().getLevel(SarconDimension.LEVEL),this);
+            }
+        }
     }
 }

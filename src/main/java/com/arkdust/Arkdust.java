@@ -5,6 +5,10 @@ import com.arkdust.registry.render.RenderTypeRegistry;
 import com.arkdust.registry.worldgen.detector.ConfiguredFeatureRegistry;
 import com.arkdust.registry.worldgen.detector.FeatureRegistry;
 import com.arkdust.registry.worldgen.detector.PlacedFeatureRegistry;
+import com.arkdust.registry.worldgen.level.BiomeSourceRegistry;
+import com.arkdust.registry.worldgen.level.ChunkGeneratorRegistry;
+import com.arkdust.registry.worldgen.level.DimensionTypeRegistry;
+import com.arkdust.registry.worldgen.level.RuleSourceRegistry;
 import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModLoadingContext;
@@ -31,9 +35,13 @@ public class Arkdust
         CreativeTabRegistry.TABS.register(bus);
         BlockEntityRegistry.REGISTER.register(bus);
 
+//        DimensionTypeRegistry.REGISTER.register(bus);
+        RuleSourceRegistry.REGISTRY.register(bus);
         FeatureRegistry.REGISTER.register(bus);
         ConfiguredFeatureRegistry.registry(bus);
         PlacedFeatureRegistry.registry(bus);
+        BiomeSourceRegistry.REGISTER.register(bus);
+        ChunkGeneratorRegistry.REGISTER.register(bus);
 
         RenderTypeRegistry.bootstrap();
 
