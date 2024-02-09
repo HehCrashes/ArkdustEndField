@@ -2,6 +2,7 @@ package com.arkdust;
 
 import com.arkdust.registry.*;
 import com.arkdust.registry.render.RenderTypeRegistry;
+import com.arkdust.registry.system.ClimateParameterRegistry;
 import com.arkdust.registry.worldgen.detector.ConfiguredFeatureRegistry;
 import com.arkdust.registry.worldgen.detector.FeatureRegistry;
 import com.arkdust.registry.worldgen.detector.PlacedFeatureRegistry;
@@ -44,6 +45,8 @@ public class Arkdust
         ChunkGeneratorRegistry.REGISTER.register(bus);
 
         RenderTypeRegistry.bootstrap();
+
+        ClimateParameterRegistry.REGISTER.register(bus);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

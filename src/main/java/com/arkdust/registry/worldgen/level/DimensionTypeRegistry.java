@@ -19,7 +19,7 @@ import java.util.OptionalLong;
 public class DimensionTypeRegistry {
     public static void bootstrap(BootstapContext<DimensionType> context){
         context.register(SarconDimension.TYPE,new DimensionType(OptionalLong.empty(),true,false,false,false,0.00001,true,false,
-            0,464,464, BlockTags.INFINIBURN_OVERWORLD, BuiltinDimensionTypes.OVERWORLD_EFFECTS,0,new DimensionType.MonsterSettings(true,true, UniformInt.of(0, 6),9)));
+            0,304,304, BlockTags.INFINIBURN_OVERWORLD, BuiltinDimensionTypes.OVERWORLD_EFFECTS,0,new DimensionType.MonsterSettings(true,true, UniformInt.of(0, 6),9)));
     }
 
 //    public static final DeferredRegister<DimensionType> REGISTER = DeferredRegister.create(Registries.DIMENSION_TYPE, Arkdust.MODID);

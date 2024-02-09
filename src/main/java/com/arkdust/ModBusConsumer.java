@@ -3,6 +3,7 @@ package com.arkdust;
 import com.arkdust.blockentity.portal.SpiritPortalBlockEntity;
 import com.arkdust.datagen.*;
 import com.arkdust.registry.BlockEntityRegistry;
+import com.arkdust.registry.regtype.ResourceKeyRegistry;
 import com.arkdust.registry.render.RenderTypeRegistry;
 import com.arkdust.registry.worldgen.detector.ConfiguredFeatureRegistry;
 import com.arkdust.registry.worldgen.level.BiomeRegistry;
@@ -24,6 +25,7 @@ import net.neoforged.neoforge.client.event.RegisterShadersEvent;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.neoforged.neoforge.registries.NewRegistryEvent;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -32,9 +34,9 @@ import java.util.concurrent.CompletableFuture;
 @Mod.EventBusSubscriber(modid = Arkdust.MODID,bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModBusConsumer {
     private static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
+            .add(Registries.NOISE_SETTINGS, NoiseGenSettingRegistry::bootstrap)
             .add(Registries.DIMENSION_TYPE, DimensionTypeRegistry::bootstrap)
             .add(Registries.LEVEL_STEM, LevelStemRegistry::bootstrap)
-            .add(Registries.NOISE_SETTINGS, NoiseGenSettingRegistry::bootstrap)
 //            .add(Registries.PROCESSOR_LIST, StructureProcessorListRegistry::bootstrap)
 //            .add(Registries.STRUCTURE, StructureRegistry::bootstrap)
 //            .add(Registries.TEMPLATE_POOL, ExtraStructureJigsawPool::bootstrap)
@@ -77,6 +79,11 @@ public class ModBusConsumer {
     @SubscribeEvent
     public static void shadersRegistry(RegisterShadersEvent event) throws IOException {
         event.registerShader(new ShaderInstance(event.getResourceProvider(),new ResourceLocation(Arkdust.MODID,"spirit_portal"), DefaultVertexFormat.BLOCK),instance -> RenderTypeRegistry.SHADERINS_SPIRIT_PORTAL = instance);
+    }
+
+    @SubscribeEvent
+    public static void newRegistry(NewRegistryEvent event){
+        event.register(ResourceKeyRegistry.CLIMATE_PARAMETER);
     }
 
 }

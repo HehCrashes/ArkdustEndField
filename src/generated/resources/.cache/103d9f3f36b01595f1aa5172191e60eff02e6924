@@ -1,6 +1,6 @@
-// 1.20.4	2024-02-03T23:01:08.783069	Registries
-afe91b0069d61f63d42542cbfc61319693221769 data/arkdust/dimension/sarcon.json
-5e7215e106684adadfbdb8fba45da481b5c8ebe6 data/arkdust/dimension_type/sarcon_type.json
+// 1.20.4	2024-02-08T14:09:23.3522731	Registries
+b779f67fddcc3f810c7825de5226799f1175913d data/arkdust/dimension/sarcon.json
+d57a51c15b64d51b48ce9f9da68badd4ec17af87 data/arkdust/dimension_type/sarcon_type.json
 6a57e5724b6192673baefed323a727797ecb6912 data/arkdust/worldgen/biome/sarcon/dead_forest.json
 6a57e5724b6192673baefed323a727797ecb6912 data/arkdust/worldgen/biome/sarcon/degraded_grassland.json
 6a57e5724b6192673baefed323a727797ecb6912 data/arkdust/worldgen/biome/sarcon/desert.json
@@ -13,4 +13,4 @@ afe91b0069d61f63d42542cbfc61319693221769 data/arkdust/dimension/sarcon.json
 6a57e5724b6192673baefed323a727797ecb6912 data/arkdust/worldgen/biome/sarcon/plateau.json
 6a57e5724b6192673baefed323a727797ecb6912 data/arkdust/worldgen/biome/sarcon/rain_forest.json
 6a57e5724b6192673baefed323a727797ecb6912 data/arkdust/worldgen/biome/sarcon/sparse_rain_forest.json
-0ce583ae41337a303d2056678fb2dfeb70686df8 data/arkdust/worldgen/noise_settings/sarcon.json
+0bd9e51eeb2a86be43643967732fe07427e56a3b data/arkdust/worldgen/noise_settings/sarcon.json
