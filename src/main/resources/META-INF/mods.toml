@@ -67,7 +67,12 @@ description='''${mod_description}'''
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
-
+[[dependencies.arkdust]]
+    modId="modernui"
+    type="required"
+    versionRange="[3.10.0.6,)"
+    ordering="NONE"
+    side="CLIENT"
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
 # stop your mod loading on the server for example.
@@ -75,3 +80,5 @@ description='''${mod_description}'''
 #openGLVersion="[3.2,)"
 [[accessTransformers]]
 file="META-INF/accesstransformer.cfg"
+
+

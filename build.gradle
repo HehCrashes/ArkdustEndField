@@ -9,9 +9,38 @@ plugins {
 version = mod_version
 group = mod_group_id
 
+
 repositories {
     mavenLocal()
+
+    maven {
+        name 'IzzelAliz Maven'
+        url 'https://maven.izzel.io/releases/'
+    }
+
+    maven {
+        name 'Curse Maven'
+        url = "https://www.cursemaven.com"
+    }
+
+    maven {
+        url "https://mvn.cloud.alipay.com/nexus/content/repositories/open/"
+    }
+
+    maven{
+        url 'https://maven.aliyun.com/nexus/content/groups/public/'
+    }
+
+    maven {
+        url 'https://maven.aliyun.com/nexus/content/repositories/google'
+    }
 }
+
+configurations {
+    library
+    implementation.extendsFrom library
+}
+
 
 minecraft {
     accessTransformers {
@@ -52,11 +81,17 @@ runs {
     client {
         // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
         systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
+
+//        property 'mixin.env.remapRefMap', 'true'
+//        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
     }
 
     server {
         systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
         programArgument '--nogui'
+
+//        property 'mixin.env.remapRefMap', 'true'
+//        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
     }
 
     // This run config launches GameTestServer and runs all registered gametests, then exits.
@@ -87,6 +122,16 @@ dependencies {
     // And its provides the option to then use net.minecraft as the group, and one of; client, server or joined as the module name, plus the game version as version.
     // For all intends and purposes: You can treat this dependency as if it is a normal library you would use.
     implementation "net.neoforged:neoforge:${neo_version}"
+
+    // Modern UI core framework
+    library "icyllis.modernui:ModernUI-Core:${modernui_version}"
+    // Modern UI core extensions
+    library "icyllis.modernui:ModernUI-Markdown:${modernui_version}"
+    // Modern UI for Minecraft Forge
+//    implementation "icyllis.modernui:ModernUI-NeoForge:${minecraft_version}-${modernui_version}.+"
+
+    compileOnly "curse.maven:modern-ui-352491:5040141"
+    runtimeOnly "curse.maven:modern-ui-352491:5040141"
 
     // Example mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

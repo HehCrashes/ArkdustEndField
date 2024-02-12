@@ -5,18 +5,18 @@
     "biome_source": {
       "type": "arkdust:sarcon",
       "biomes": [
-        "arkdust:sarcon/grassland",
-        "arkdust:sarcon/dead_forest",
-        "arkdust:sarcon/fruitful_soil",
-        "arkdust:sarcon/degraded_grassland",
+        "arkdust:sarcon/sparse_rain_forest",
         "arkdust:sarcon/rain_forest",
         "arkdust:sarcon/golden_desert",
         "arkdust:sarcon/plateau",
+        "arkdust:sarcon/desert",
+        "arkdust:sarcon/degraded_grassland",
         "arkdust:sarcon/oasis",
-        "arkdust:sarcon/gem_forest",
-        "arkdust:sarcon/sparse_rain_forest",
         "arkdust:sarcon/hot_land",
-        "arkdust:sarcon/desert"
+        "arkdust:sarcon/grassland",
+        "arkdust:sarcon/fruitful_soil",
+        "arkdust:sarcon/gem_forest",
+        "arkdust:sarcon/dead_forest"
       ]
     },
     "settings": "arkdust:sarcon"

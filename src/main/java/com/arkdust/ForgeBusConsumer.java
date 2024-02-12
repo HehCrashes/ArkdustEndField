@@ -1,6 +1,7 @@
 package com.arkdust;
 
 import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.server.level.ServerLevel;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.event.level.LevelEvent;
@@ -9,7 +10,6 @@ import net.neoforged.neoforge.event.level.LevelEvent;
 public class ForgeBusConsumer {
     @SubscribeEvent
     public static void onLevelLoad(LevelEvent.Load event){
-//        event.getLevel() = null;
-//        event.getLevel()
+//        ((ServerLevel)(event.getLevel())).getDataStorage().get()
     }
 }

@@ -3,9 +3,8 @@ package com.arkdust;
 import com.arkdust.blockentity.portal.SpiritPortalBlockEntity;
 import com.arkdust.datagen.*;
 import com.arkdust.registry.BlockEntityRegistry;
-import com.arkdust.registry.regtype.ResourceKeyRegistry;
+import com.arkdust.registry.regtype.ArkdustRegistry;
 import com.arkdust.registry.render.RenderTypeRegistry;
-import com.arkdust.registry.worldgen.detector.ConfiguredFeatureRegistry;
 import com.arkdust.registry.worldgen.level.BiomeRegistry;
 import com.arkdust.registry.worldgen.level.DimensionTypeRegistry;
 import com.arkdust.registry.worldgen.level.LevelStemRegistry;
@@ -83,7 +82,9 @@ public class ModBusConsumer {
 
     @SubscribeEvent
     public static void newRegistry(NewRegistryEvent event){
-        event.register(ResourceKeyRegistry.CLIMATE_PARAMETER);
+        event.register(ArkdustRegistry.CLIMATE_PARAMETER);
+        event.register(ArkdustRegistry.WEATHER);
+        event.register(ArkdustRegistry.WEATHER_PROVIDER);
     }
 
 }

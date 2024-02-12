@@ -48,6 +48,9 @@ public class Arkdust
 
         ClimateParameterRegistry.REGISTER.register(bus);
 
+
+        Prepared.bootstrap();
+
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 }

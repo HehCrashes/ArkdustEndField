@@ -3,6 +3,7 @@ package com.arkdust.registry;
 import com.arkdust.Arkdust;
 import com.arkdust.datagen.BlockTagGen;
 import com.arkdust.helper.ListAndMapHelper;
+import com.arkdust.item.TestItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -27,6 +28,7 @@ public class ItemRegistry {
 
     public static final DeferredRegister.Items ITEMS_DEFAULT = DeferredRegister.createItems(Arkdust.MODID);
 
+    public static final DeferredItem<Item> TEST_ITEM = ITEMS_DEFAULT.register("test_item",TestItem::new);
     public static final DeferredItem<BlockItem> SPIRIT_STONE_UNACTIVATED = ITEMS_DEFAULT.registerSimpleBlockItem(BlockRegistry.SPIRIT_STONE_UNACTIVATED,new Item.Properties().fireResistant());
     public static final DeferredItem<BlockItem> SPIRIT_STONE_ACTIVATED = ITEMS_DEFAULT.registerSimpleBlockItem(BlockRegistry.SPIRIT_STONE_ACTIVATED,new Item.Properties().fireResistant());
     public static final DeferredItem<BlockItem> SPIRIT_STONE = ITEMS_DEFAULT.registerSimpleBlockItem(BlockRegistry.SPIRIT_STONE,new Item.Properties().fireResistant());
